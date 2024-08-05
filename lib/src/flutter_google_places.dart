@@ -1,5 +1,3 @@
-library flutter_google_places.src;
-
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -71,7 +69,7 @@ class PlacesAutocompleteWidget extends StatefulWidget {
     this.region,
     this.logo,
     this.onError,
-    Key? key,
+    super.key,
     this.proxyBaseUrl,
     this.httpClient,
     this.startText,
@@ -87,7 +85,7 @@ class PlacesAutocompleteWidget extends StatefulWidget {
     this.showContainerBackground = false,
     this.backgroundColor,
     this.borderRadius,
-  }) : super(key: key);
+  });
 
   @override
   State<PlacesAutocompleteWidget> createState() =>
@@ -284,11 +282,11 @@ class PlacesAutocompleteResult extends StatefulWidget {
   final TextStyle? resultTextStyle;
 
   const PlacesAutocompleteResult({
-    Key? key,
+    super.key,
     this.onTap,
     this.logo,
     this.resultTextStyle,
-  }) : super(key: key);
+  });
 
   @override
   PlacesAutocompleteResultState createState() =>
@@ -323,10 +321,10 @@ class AppBarPlacesAutoCompleteTextField extends StatefulWidget {
   final TextStyle? textStyle;
 
   const AppBarPlacesAutoCompleteTextField({
-    Key? key,
+    super.key,
     this.textDecoration,
     this.textStyle,
-  }) : super(key: key);
+  });
 
   @override
   AppBarPlacesAutoCompleteTextFieldState createState() =>
@@ -385,7 +383,7 @@ class PoweredByGoogleImage extends StatelessWidget {
   static const _poweredByGoogleBlack =
       "packages/flutter_google_places/assets/google_black.png";
 
-  const PoweredByGoogleImage({Key? key}) : super(key: key);
+  const PoweredByGoogleImage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -412,11 +410,11 @@ class PredictionsListView extends StatelessWidget {
   final TextStyle? resultTextStyle;
 
   const PredictionsListView({
-    Key? key,
+    super.key,
     required this.predictions,
     this.onTap,
     this.resultTextStyle,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -440,11 +438,11 @@ class PredictionTile extends StatelessWidget {
   final TextStyle? resultTextStyle;
 
   const PredictionTile({
-    Key? key,
+    super.key,
     required this.prediction,
     this.onTap,
     this.resultTextStyle,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
